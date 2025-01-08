@@ -8,6 +8,10 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.49.1",
-    "@types/node": "^22.10.3"
+    "@types/node": "^22.10.3",
+    "playwright-teamcity-reporter": "^1.0.4"
+  },
+  "dependencies": {
+    "strip-ansi": "^7.1.0"
   }
 }
