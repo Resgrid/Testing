@@ -9,7 +9,7 @@ test.describe('documents', () => {
     await page.getByPlaceholder('Password').fill(process.env.PW_LOGIN_PASSWORD);
     await page.getByRole('button', { name: 'Log On' }).click();
     await page.goto('https://qaweb.resgrid.dev/User/Home/Dashboard');
-    await page.getByRole('link', { name: ' Documents' }).click();
+    await page.getByRole('link', { name: 'Documents' }).click();
     await expect(page.locator('#page-wrapper')).toContainText('test');
   });
 });

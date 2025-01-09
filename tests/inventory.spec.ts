@@ -8,7 +8,7 @@ test.describe('inventory', () => {
     await page.getByPlaceholder('Password').click();
     await page.getByPlaceholder('Password').fill(process.env.PW_LOGIN_PASSWORD);
     await page.getByRole('button', { name: 'Log On' }).click();
-    await page.getByRole('link', { name: ' Inventory' }).click();
+    await page.getByRole('link', { name: 'Inventory' }).click();
     await expect(page.locator('tbody')).toContainText('Station 2');
     await page.getByRole('link', { name: 'View History' }).click();
     await expect(page.locator('tbody')).toContainText('523');

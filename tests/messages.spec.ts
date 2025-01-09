@@ -9,8 +9,8 @@ test.describe('messages', () => {
     await page.getByPlaceholder('Password').fill(process.env.PW_LOGIN_PASSWORD);
     await page.getByRole('button', { name: 'Log On' }).click();
     await page.goto('https://qaweb.resgrid.dev/User/Home/Dashboard');
-    await page.getByRole('link', { name: '' }).click();
-    await page.getByRole('link', { name: ' View Your Message Inbox' }).click();
+    await page.locator('#side-menu').getByRole('link', { name: 'Shawn Jackson' }).click();
+    await page.getByRole('link', { name: 'Mailbox' }).click();
     await expect(page.locator('tbody')).toContainText('Test for WebJob Worker');
     await page.getByRole('row', { name: 'test Carl Barrett 01/31/2016' }).locator('#message').check();
     await page.getByText('Mark Selected as Read').click();
@@ -38,8 +38,8 @@ test.describe('messages', () => {
     await page.getByPlaceholder('Password').fill(process.env.PW_LOGIN_PASSWORD);
     await page.getByRole('button', { name: 'Log On' }).click();
     await page.goto('https://qaweb.resgrid.dev/User/Home/Dashboard');
-    await page.getByRole('link', { name: '' }).click();
-    await page.getByRole('link', { name: ' View Your Message Inbox' }).click();
+    await page.locator('#side-menu').getByRole('link', { name: 'Shawn Jackson' }).click();
+    await page.getByRole('link', { name: 'Mailbox' }).click();
     await page.getByRole('link', { name: ' Sent Messages' }).click();
     await expect(page.locator('tbody')).toContainText('Test Message');
   });
@@ -52,8 +52,8 @@ test.describe('messages', () => {
     await page.getByPlaceholder('Password').fill(process.env.PW_LOGIN_PASSWORD);
     await page.getByRole('button', { name: 'Log On' }).click();
     await page.goto('https://qaweb.resgrid.dev/User/Home/Dashboard');
-    await page.getByRole('link', { name: '' }).click();
-    await page.getByRole('link', { name: ' View Your Message Inbox' }).click();
+    await page.locator('#side-menu').getByRole('link', { name: 'Shawn Jackson' }).click();
+    await page.getByRole('link', { name: 'Mailbox' }).click();
     await page.getByRole('link', { name: 'Compose Message' }).click();
     await page.goto('https://qaweb.resgrid.dev/User/Messages/Compose');
     await page.getByPlaceholder('The subject/title of the').click();

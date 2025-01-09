@@ -8,7 +8,7 @@ test.describe('notes', () => {
     await page.getByPlaceholder('Password').click();
     await page.getByPlaceholder('Password').fill(process.env.PW_LOGIN_PASSWORD);
     await page.getByRole('button', { name: 'Log On' }).click();
-    await page.getByRole('link', { name: ' Notes' }).click();
+    await page.getByRole('link', { name: 'Notes' }).click();
     await expect(page.locator('#page-wrapper')).toContainText('Jj test');
     await page.getByRole('link', { name: 'New Note' }).click();
     await expect(page.locator('#newNoteForm')).toContainText('Category');

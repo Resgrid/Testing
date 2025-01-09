@@ -9,7 +9,7 @@ test.describe('trainings', () => {
     await page.getByPlaceholder('Password').fill(process.env.PW_LOGIN_PASSWORD);
     await page.getByRole('button', { name: 'Log On' }).click();
     await page.goto('https://qaweb.resgrid.dev/User/Home/Dashboard');
-    await page.getByRole('link', { name: ' Trainings' }).click();
+    await page.getByRole('link', { name: 'Trainings' }).click();
     await expect(page.locator('tbody')).toContainText('Protocol training for ebola.');
     await page.getByRole('link', { name: 'View Training' }).nth(1).click();
     await expect(page.locator('#page-wrapper')).toContainText('11/10/2014');

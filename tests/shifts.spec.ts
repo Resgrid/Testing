@@ -8,7 +8,7 @@ test.describe('shifts', () => {
     await page.getByPlaceholder('Password').click();
     await page.getByPlaceholder('Password').fill(process.env.PW_LOGIN_PASSWORD);
     await page.getByRole('button', { name: 'Log On' }).click();
-    await page.getByRole('link', { name: ' Shifts' }).click();
+    await page.getByRole('link', { name: 'Shifts' }).click();
     await expect(page.getByRole('cell', { name: 'S Shift' })).toBeVisible();
     await expect(page.locator('tbody')).toContainText('S Shift');
     await page.getByRole('link', { name: 'Your Shifts' }).click();
